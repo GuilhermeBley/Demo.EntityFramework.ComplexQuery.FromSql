@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E1C17A65-93BE-4F5C-B53B-7DFC2BFBC7C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.EntityFramework.ComplexQuery.FromSql", "src\Demo.EntityFramework.ComplexQuery.FromSql\Demo.EntityFramework.ComplexQuery.FromSql.csproj", "{5BC6CA60-1C83-4138-A8D8-35F1636E7D16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.EntityFramework.ComplexQuery.FromSql.Api", "src\Demo.EntityFramework.ComplexQuery.FromSql.Api\Demo.EntityFramework.ComplexQuery.FromSql.Api.csproj", "{8EC5695E-4A86-495C-9723-AEEC15A3E961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +16,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BC6CA60-1C83-4138-A8D8-35F1636E7D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BC6CA60-1C83-4138-A8D8-35F1636E7D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BC6CA60-1C83-4138-A8D8-35F1636E7D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BC6CA60-1C83-4138-A8D8-35F1636E7D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC5695E-4A86-495C-9723-AEEC15A3E961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC5695E-4A86-495C-9723-AEEC15A3E961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC5695E-4A86-495C-9723-AEEC15A3E961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC5695E-4A86-495C-9723-AEEC15A3E961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5BC6CA60-1C83-4138-A8D8-35F1636E7D16} = {E1C17A65-93BE-4F5C-B53B-7DFC2BFBC7C0}
+		{8EC5695E-4A86-495C-9723-AEEC15A3E961} = {E1C17A65-93BE-4F5C-B53B-7DFC2BFBC7C0}
 	EndGlobalSection
 EndGlobal
