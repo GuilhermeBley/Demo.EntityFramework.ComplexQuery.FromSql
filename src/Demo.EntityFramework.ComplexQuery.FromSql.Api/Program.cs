@@ -1,11 +1,17 @@
 using Demo.EntityFramework.ComplexQuery.FromSql.Api.EntityFramework;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddOData(setup => {
+        setup.EnableNoDollarQueryOptions = false;
+        setup.Select().Filter().OrderBy();
+    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
