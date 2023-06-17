@@ -23,8 +23,7 @@ public class SaleController : ControllerBase
                 _context.QuerySalesCostumers.FromSqlRaw(
                     @"
                         SELECT * FROM
-                    "
-                    )
+                    ")
             )
         );
 }

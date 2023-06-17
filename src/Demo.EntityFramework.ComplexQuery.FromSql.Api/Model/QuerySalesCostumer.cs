@@ -7,7 +7,7 @@ public class QuerySalesCostumer
     public double SaleValue { get; set; }
     public DateTime SaleDate { get; set; }
 
-    public Guid CostumerId { get; set; }
-    public string CostumerName { get; set; } = string.Empty;
-    public string CostumerAddress { get; set; } = string.Empty;
+    public Guid CustomerId { get; set; }
+    public string CustomerName { get; set; } = string.Empty;
+    public string CustomerAddress { get; set; } = string.Empty;
 }
