@@ -10,6 +10,7 @@ builder.Services.AddControllers()
     .AddOData(setup => {
         setup.EnableNoDollarQueryOptions = false;
         setup.Select().Filter().OrderBy();
+        setup.SetMaxTop(int.MaxValue);
     });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -22,7 +23,10 @@ builder.Services.AddDbContext<DemoContext>(
         optionsBuilder.UseMySql(
             builder.Configuration.GetConnectionString("mysql"),
             ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("mysql"))
-        );
+        )
+        .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
+        .EnableDetailedErrors(builder.Environment.IsDevelopment())
+        .EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
     });
 
 var app = builder.Build();

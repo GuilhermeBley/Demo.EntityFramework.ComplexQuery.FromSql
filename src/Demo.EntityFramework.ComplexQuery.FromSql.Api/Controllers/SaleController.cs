@@ -1,6 +1,7 @@
 using Demo.EntityFramework.ComplexQuery.FromSql.Api.EntityFramework;
 using Demo.EntityFramework.ComplexQuery.FromSql.Api.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo.EntityFramework.ComplexQuery.FromSql.Api.Controllers;
@@ -16,6 +17,7 @@ public class SaleController : ControllerBase
         _context = context;
     }
 
+    [EnableQuery]
     [HttpGet("costumer")]
     public async Task<ActionResult<IQueryable<QuerySalesCostumer>>> GetCostumer()
         => await Task.FromResult(
