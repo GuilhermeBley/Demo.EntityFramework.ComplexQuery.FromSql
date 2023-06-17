@@ -21,9 +21,9 @@ public class SaleController : ControllerBase
         => await Task.FromResult(
             Ok(
                 _context.QuerySalesCostumers.FromSqlRaw(
-                    @"""
-                    SELECT * FROM 
-                    """
+                    @"
+                        SELECT * FROM
+                    "
                     )
             )
         );
