@@ -39,4 +39,28 @@ INNER JOIN demo_ef_compq.customer c
                     ")
             )
         );
+
+    [EnableQuery]
+    [HttpGet("costumer/{costumerName}")]
+    public async Task<ActionResult<IQueryable<QuerySalesCostumer>>> GetCostumer(string costumerName)
+        => await Task.FromResult(
+            Ok(
+                _context.QuerySalesCostumers.FromSqlRaw(
+                    @"
+SELECT 
+	s.Id SaleId,
+    s.Description SaleDescription,
+    s.Value SaleValue,
+	s.Date SaleDate,
+    
+    c.Id CustomerId,
+    c.Name CustomerName,
+    c.Address CustomerAddress
+FROM demo_ef_compq.sales s
+INNER JOIN demo_ef_compq.customer c
+	ON s.CustomerId = c.Id
+WHERE c.Name = {0}
+                    ", costumerName)
+            )
+        );
 }
