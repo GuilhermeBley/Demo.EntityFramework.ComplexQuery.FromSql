@@ -22,7 +22,18 @@ public class SaleController : ControllerBase
             Ok(
                 _context.QuerySalesCostumers.FromSqlRaw(
                     @"
-                        SELECT * FROM
+SELECT 
+	s.Id SaleId,
+    s.Description SaleDescription,
+    s.Value SaleValue,
+	s.Date SaleDate,
+    
+    c.Id CustomerId,
+    c.Name CustomerName,
+    c.Address CustomerAddress
+FROM demo_ef_compq.sales s
+INNER JOIN demo_ef_compq.customer c
+	ON s.CustomerId = c.Id
                     ")
             )
         );

@@ -20,6 +20,7 @@ builder.Services.AddDbContext<DemoContext>(
     (optionsBuilder) =>
     {
         optionsBuilder.UseMySql(
+            builder.Configuration.GetConnectionString("mysql"),
             ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("mysql"))
         );
     });
